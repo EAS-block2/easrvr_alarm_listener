@@ -1,0 +1,13 @@
+[Unit]
+Description=Emergency Alert System listener service
+After=network.target
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+ExecStart=/etc/EAS/conf_server_listener
+
+[Install]
+WantedBy=multi-user.target
