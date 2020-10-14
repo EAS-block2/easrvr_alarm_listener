@@ -61,7 +61,7 @@ fn main() {
             Err(_) => {thread::sleep(Duration::from_secs(2));
             println!("no new data, sleeping");
             timeoutcount += 1;
-            if timeoutcount > 20{
+            if timeoutcount > 5{
                 for i in &mut alarms{i.clear()}
             }} //usually will return an error as no data has been sent
         }
